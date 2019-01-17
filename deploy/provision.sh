@@ -23,7 +23,7 @@ sudo -u postgres psql -c "CREATE USER root WITH PASSWORD '123oij1oi3jd1o2i3j';"
 sudo -u postgres psql -c "CREATE DATABASE calendar;"
 sudo -u postgres psql -c "grant all privileges on database calendar to root;"
 sudo echo "listen_addresses = '*'" >> /etc/postgresql/9.4/main/postgresql.conf
-sudo echo "host tenders root all md5" >> /etc/postgresql/9.4/main/pg_hba.conf
+sudo echo "host calendar root all md5" >> /etc/postgresql/9.4/main/pg_hba.conf
 sudo service postgresql restart
 # Create SWAP
 /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024

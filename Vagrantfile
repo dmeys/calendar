@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "./", "/var/www/backend", :owner => 'www-data', :group => 'www-data'
 
   # Main provision script, installs all shit.
-  config.vm.provision "shell", path: "./deploy/provision.sh"
+  #config.vm.provision "shell", path: "./deploy/provision.sh"
 
   config.vm.provision "file", source: "./deploy/nginx.conf", destination: "~/calendar.conf", run: "always"
   config.vm.provision "shell", run: "always"  do |s|
